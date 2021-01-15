@@ -108,7 +108,7 @@ object Recap extends App {
   }
 
   //all the patterns
-  
+
 
 
 }
