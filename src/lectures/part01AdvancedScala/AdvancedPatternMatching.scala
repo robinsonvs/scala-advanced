@@ -120,5 +120,5 @@ object AdvancedPatternMatching extends App {
     case _ => "An alien"
   })
 
-  
+
 }
