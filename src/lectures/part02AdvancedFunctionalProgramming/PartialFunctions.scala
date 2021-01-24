@@ -66,4 +66,22 @@ object PartialFunctions extends App {
    * 1 - construct a Partial Function yourself (anonymous class)
    * 2 - dumb chatbot as Partial Function
    */
+  val aManualFussyFunction = new PartialFunction[Int, Int] {
+    override def apply(x: Int): Int = x match {
+      case 1 => 42
+      case 2 => 65
+      case 5 => 999
+    }
+
+    override def isDefinedAt(x: Int): Boolean =
+      x == 1 || x == 2 || x == 5
+  }
+
+  val chatBot: PartialFunction[String, String] = {
+    case "hello" => "Hi, my name is HAL9000"
+    case "goodbye" => "Once you start talking to me, there is no return, human"
+    case "call mom" => "Unable to find your phone without your credit card"
+  }
+
+  scala.io.Source.stdin.getLines().map(chatBot).foreach(println)
 }
