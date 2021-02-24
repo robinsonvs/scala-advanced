@@ -70,7 +70,7 @@ object ParallelUtils extends App {
 
     override def parallelismLevel: Int = ???
 
-    override val environment: AnyRef = _
+    override val environment: AnyRef = ???
   }
 
   //2 - atomic operations and references
